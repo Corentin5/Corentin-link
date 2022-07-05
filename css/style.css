@@ -1,0 +1,240 @@
+/* === MISE EN PAGE GENERALE === */
+
+html{
+    font-family: 'Arial', sans-serif; 
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Title */
+
+.main-title{
+    font-family: 'Tiro Gurmukhi', serif;
+    font-size: 2.5em;
+    color: #FFF;
+    margin-bottom: 20px;
+}
+
+
+
+/* Button */
+
+.main-btn{
+    padding: 30px 50px;
+    border: 2px solid #FFF;
+    border-radius: 30px;
+}
+
+/* === HEADER === */
+
+header{
+    height: 100vh;
+    width: 100%;
+    background-color: #4158D0;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    color: #FFF;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #000;
+    width: 100%;
+    opacity: 50%;
+    padding: 10px 0;
+}
+
+nav>.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 2rem;
+}
+
+.toggle{
+    display: none;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu li{
+    margin-right: 10px;
+}
+/* === MAIN === */
+
+/* Hero */
+
+#hero{
+    height: 100vh;
+    text-align: center;
+}
+
+
+.round-img{
+    width: 200px;
+    height: 200px;
+    margin:0 auto;
+}
+
+.round-img img{
+    border-radius: 50%;
+}
+
+.link a{
+    display: block;
+    margin: 0 auto;
+    width: 60vw;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-radius: 28px;
+    border: 2px solid #FFF;
+    transition: all 0.5s ease;
+}
+
+.link a:hover{
+   background-color: #fff;
+   color: #000;
+}
+
+.rs i{
+    color: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);;
+    font-size: 28px;
+}
+
+   
+
+/* RESPONSIVE */
+
+/* Nav */
+
+
+@media screen and (max-width: 780px){
+    .toggle{
+        display: block;
+        font-size: 2rem;
+        position: relative;
+        z-index: 200;
+    }
+
+    .logo{
+        position: relative;
+        z-index: 200;
+    }
+
+    .open{
+        display: block;
+    }
+
+    .close{
+        display: none !important;
+    }
+
+    .nav-open .open{
+        display: none;
+    }
+
+    .nav-open .close{
+        display: block !important;
+    }
+
+    .nav-open nav{
+        opacity: 100%;
+    }
+
+    .menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        background-color: #000;
+        transform: translateX(-100%);
+        transition: all 0.5s ease;
+    }
+
+    .menu ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto;
+        height: 50vh;
+        text-align: center;
+    }
+
+    .menu li{
+        font-size: 2rem;
+    }
+
+    .nav-open .menu{
+        transform: translateX(0);
+    }
+}
+
+
